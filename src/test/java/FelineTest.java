@@ -1,7 +1,7 @@
 import com.example.Feline;
 import com.example.Predator;
 
-public class FelineTest {
+public class FelineTest extends BaseTest {
 
     static Predator feline = new Feline();
 
