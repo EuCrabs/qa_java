@@ -1,11 +1,13 @@
 import com.example.Feline;
-import com.example.Predator;
+import org.junit.Test;
 
-public class FelineTest extends BaseTest {
+import static org.junit.Assert.assertEquals;
 
-    static Predator feline = new Feline();
+public class FelineTest {
 
-    public static void main(String[] args) throws Exception {
-        System.out.println(feline.eatMeat());
+    @Test
+    public void testGetFamily() {
+        Feline feline = new Feline();
+        assertEquals("Кошачьи", feline.getFamily());
     }
 }
