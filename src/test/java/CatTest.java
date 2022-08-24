@@ -12,20 +12,21 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CatTest extends BaseTest {
+public class CatTest {
     @Mock
     static Feline feline;
 
     @Test
-    public void test1() {
+    public void catHasSound() {
         Cat cat = new Cat(feline);
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
-    public void test2() throws Exception {
+    public void catEatMeat() throws Exception {
         Cat cat = new Cat(feline);
-        Mockito.when(feline.eatMeat()).thenReturn(List.of("Привет"));
-        assertEquals(List.of("Привет"), cat.getFood());
+        List<String> list = List.of("Животные", "Птицы");
+        Mockito.when(feline.eatMeat()).thenReturn(list);
+        assertEquals(list, cat.getFood());
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class FelineTestParam extends BaseTest {
+public class FelineTestParam {
     private String animalKind;
     private List<String> list;
 
