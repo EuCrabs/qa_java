@@ -21,19 +21,14 @@ public class FelineTest extends BaseTest {
     public static Object[][] getTestData() {
         return new Object[][] {
                 {"Травоядное", List.of("Трава", "Различные растения")},
-                {"Хищник", List.of("Животные", "Птицы", "Рыба")},
-                {"Веган", List.of("Соя")}
+                {"Хищник", List.of("Животные", "Птицы", "Рыба")}
         };
     }
 
     @Test
-    public void testAnimalKind() {
-        try {
-            Feline feline = new Feline();
-            assertEquals(LIST, feline.getFood(ANIMAL_KIND));
-        } catch (Exception e) {
-            assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник", e.getMessage());
-        }
+    public void testAnimalKind() throws Exception {
+        Feline feline = new Feline();
+        assertEquals(LIST, feline.getFood(ANIMAL_KIND));
     }
 
     @Test
